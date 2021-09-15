@@ -22,3 +22,8 @@
     local-name: migrave_ros_msgs
     uri: https://github.com/migrave/migrave_ros_msgs.git
     version: main
+
+- git:
+    local-name: migrave_knowledge_base
+    uri: https://github.com/migrave/migrave_knowledge_base.git
+    version: main
