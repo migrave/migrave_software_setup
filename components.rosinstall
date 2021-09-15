@@ -1,0 +1,24 @@
+- git:
+    local-name: migrave_performance_tracking
+    uri: https://github.com/migrave/migrave_performance_tracking.git
+    version: main
+
+- git:
+    local-name: migrave_person_state_estimation
+    uri: https://github.com/migrave/migrave_person_state_estimation.git
+    version: main
+
+- git:
+    local-name: migrave_behaviour_manager
+    uri: https://github.com/migrave/migrave_behaviour_manager.git
+    version: main
+
+- git:
+    local-name: migrave_perception
+    uri: https://github.com/migrave/migrave_perception.git
+    version: main
+
+- git:
+    local-name: migrave_ros_msgs
+    uri: https://github.com/migrave/migrave_ros_msgs.git
+    version: main
