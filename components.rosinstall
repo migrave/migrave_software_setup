@@ -22,3 +22,9 @@
     local-name: migrave_ros_msgs
     uri: https://github.com/migrave/migrave_ros_msgs.git
     version: main
+
+- git:
+    local-name: qt_action_executor
+    uri: https://github.com/migrave/qt_action_executor.git
+    version: main
+
