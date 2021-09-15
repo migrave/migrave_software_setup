@@ -1,3 +1,4 @@
+# install catkin and rosdep dependencies
 sudo apt install python3-catkin-tools \
                  python3-wstool \
                  python3-rosdep \
@@ -6,6 +7,9 @@ sudo apt install python3-catkin-tools \
 
 sudo rosdep init
 rosdep update
+
+# install ROS dependencies
+sudo apt install ros-noetic-vision-msgs
 
 # create catkin workspace
 cd ~/
