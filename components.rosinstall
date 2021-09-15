@@ -27,3 +27,8 @@
     local-name: migrave_knowledge_base
     uri: https://github.com/migrave/migrave_knowledge_base.git
     version: main
+
+- git:
+    local-name: migrave_common
+    uri: https://github.com/migrave/migrave_common.git
+    version: main
