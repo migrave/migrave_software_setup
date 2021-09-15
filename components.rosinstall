@@ -28,7 +28,7 @@
     uri: https://github.com/migrave/qt_action_executor.git
     version: main
 
--git:
+- git:
     local-name: migrave_knowledge_base
     uri: https://github.com/migrave/migrave_knowledge_base.git
     version: main
