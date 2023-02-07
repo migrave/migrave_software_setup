@@ -2,11 +2,12 @@ version: "2"
 services:
   nao-components:
     container_name: nao
-    image: alexmitrevski/nao:zyre
+    image: nao_tablet:latest
     ports:
       - "11311:11311"
     network_mode: "host"
     command: bash -c "
       roscore &
-      { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_bringup nao_full_py.launch nao_ip:=192.168.1.121 roscore_ip:=192.168.1.118; } &
-      { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_apps speech.launch nao_ip:=192.168.1.121; } "
+      { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_bringup nao_full_py.launch nao_ip:=192.168.0.101 roscore_ip:=192.168.0.100; } &
+      { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_apps speech.launch nao_ip:=192.168.0.101; } &
+      { sleep 10; roslaunch mas_qt_tablet_interface nao_qt_tablet_interface.launch zyre_network_interface:=eth0; } "
