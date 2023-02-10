@@ -11,4 +11,4 @@ services:
       { sleep 2; rosparam set /nao_speech/language German; } &
       { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_bringup nao_full_py.launch nao_ip:=192.168.0.100 roscore_ip:=192.168.0.103; } &
       { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_apps speech.launch nao_ip:=192.168.0.100; } &
-      { sleep 10; source /workspace/devel/setup.bash; roslaunch mas_qt_tablet_interface nao_qt_tablet_interface.launch zyre_network_interface:=eth0; } "
+      { sleep 20; source /workspace/devel/setup.bash; roslaunch mas_qt_tablet_interface nao_qt_tablet_interface.launch zyre_network_interface:=eth0; } "
