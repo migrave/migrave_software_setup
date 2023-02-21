@@ -1,30 +1,6 @@
-FROM ros-kinetic-desktop:1.0
+FROM alexmitrevski/nao:zyre
 
 SHELL [ "/bin/bash", "-c" ]
-
-# setting up ROS packages
-RUN apt-get update && apt-get install -y --no-install-recommends wget curl && \
-    apt-get install -y ros-$ROS_DISTRO-catkin \
-                       ros-$ROS_DISTRO-driver-base \
-                       ros-$ROS_DISTRO-move-base-msgs \
-                       ros-$ROS_DISTRO-octomap \
-                       ros-$ROS_DISTRO-octomap-msgs \
-                       ros-$ROS_DISTRO-camera-info-manager \
-                       ros-$ROS_DISTRO-camera-info-manager-py
-
-# setting up Zyre and the ROPOD Zyre utilities
-RUN sudo apt update && \
-    sudo apt install -y python3-pip \
-                        libtool \
-                        autoconf \
-                        automake && \
-    pip3 install Cython \
-                 ipaddress \
-                 python-dateutil \
-                 inflection && \
-    cd /usr/local/src && \
-    wget https://raw.githubusercontent.com/migrave/migrave_software_setup/master/zyre_install.bash && \
-    bash zyre_install.bash
 
 # setting up the workspace
 RUN sudo apt-get install -y ros-$ROS_DISTRO-moveit && \
