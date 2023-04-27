@@ -11,7 +11,7 @@ RUN mkdir -p /workspace/src && \
     echo "source /workspace/devel/setup.bash" >> /root/.bashrc
 
 RUN apt update && \
-    apt install -y python3-pip && \
+    apt install -y python3-pip ros-$ROS_DISTRO-nao-interaction && \
     pip3 install PyYAML \
                  rospkg \
                  pyparsing==2.4.7
