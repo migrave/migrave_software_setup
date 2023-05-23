@@ -10,10 +10,10 @@ services:
       command: bash -c "
         roscore &
         { sleep 2; rosparam set /nao_speech/language German; } &
-        { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_bringup nao_full_py.launch nao_ip:=192.168.0.103 roscore_ip:=192.168.0.105; } &
-        { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_apps speech.launch nao_ip:=192.168.0.103; } &
-        { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_apps leds.launch nao_ip:=192.168.0.103; } &
-        { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_interaction_launchers nao_audio_interface.launch nao_ip:=192.168.0.103; } &
+        { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_bringup nao_full_py.launch nao_ip:=192.168.0.101 roscore_ip:=192.168.0.107; } &
+        { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_apps speech.launch nao_ip:=192.168.0.101; } &
+        { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_apps leds.launch nao_ip:=192.168.0.101; } &
+        { sleep 10; PYTHONPATH=/naoqi/pynaoqi-python2.7-2.8.6.23/lib/python2.7/site-packages:/opt/ros/kinetic/lib/python2.7/dist-packages; roslaunch nao_interaction_launchers nao_audio_interface.launch nao_ip:=192.168.0.101; } &
         { sleep 20; source /workspace/devel/setup.bash; roslaunch mas_qt_tablet_interface nao_qt_tablet_interface.launch zyre_network_interface:=eth0; } "
 
   qt-components:
@@ -24,7 +24,7 @@ services:
     network_mode: "host"
     command: bash -c "
       source /workspace/devel/setup.bash ;
-      export ROS_MASTER_URI=http://192.168.0.106:11311 ;
-      export ROS_IP=192.168.0.105 ;
+      export ROS_MASTER_URI=http://192.168.0.102:11311 ;
+      export ROS_IP=192.168.0.107 ;
       rosnode kill /qt_robot_interface &
       roslaunch mas_qt_tablet_interface qt_tablet_interface.launch zyre_network_interface:=eth0 "
