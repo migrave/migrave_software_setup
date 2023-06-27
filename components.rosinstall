@@ -52,3 +52,28 @@
     local-name: migrave_web_console
     uri: https://github.com/migrave/migrave_web_console.git
     version: main
+
+- git:
+    local-name: migrave_video_recorder
+    uri: https://github.com/migrave/migrave_video_recorder.git
+    version: main
+
+- git:
+    local-name: migrave_skeleton_recorder
+    uri: https://github.com/migrave/migrave_skeleton_recorder.git
+    version: main
+
+- git:
+    local-name: migrave_audio_recorder
+    uri: https://github.com/migrave/migrave_audio_recorder.git
+    version: main
+
+- git:
+    local-name: migrave_game_performance_recorder
+    uri: https://github.com/migrave/migrave_game_performance_recorder.git
+    version: main
+
+- git:
+    local-name: migrave_data_recorder
+    uri: https://github.com/migrave/migrave_data_recorder.git
+    version: main
